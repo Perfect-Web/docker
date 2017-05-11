@@ -1,6 +1,7 @@
-FROM perfectweb/base:cuda-8.0-devel-ubuntu16.04-v1
+FROM perfectweb/base:cuda-8.0-runtime-ubuntu16.04-v1
 MAINTAINER Alin Jurj <office@perfectweb.ro>
 
+COPY . /Data*
 COPY . /claymore
 
 ENTRYPOINT  ["/claymore/ethdcrminer64"]
