@@ -12,7 +12,7 @@ ENV WALLET t1eiBzTHA6yjMT1gkpJw4Q4wMTGwqNHMeY3
 ENV POOL_HOSTNAME zec-eu1.nanopool.org
 ENV POOL_PORT 6666
 
-RUN curl https://raw.githubusercontent.com/Optiminer/OptiminerZcash/master/optiminer-zcash-1.3.2.tar.gz | tar xz
+RUN curl https://raw.githubusercontent.com/Optiminer/OptiminerZcash/master/optiminer-zcash-1.7.0.tar.gz | tar xz
 
 WORKDIR /optiminer-zcash
 
@@ -22,5 +22,3 @@ LABEL com.nvidia.cuda.version="8.0"
 
 ENTRYPOINT ["./optiminer-zcash"]
 CMD ["-s $POOL_HOSTNAME:$POOL_PORT -u $WALLET.default -p x"]
-
-# docker run -dit --name=zcash-optiminer --restart=always perfectweb/equihash:optiminer
