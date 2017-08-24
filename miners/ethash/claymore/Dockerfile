@@ -2,6 +2,7 @@ FROM perfectweb/base:cuda-8.0-devel-ubuntu16.04-v1
 MAINTAINER Alin Jurj <office@perfectweb.ro>
 
 ADD https://github.com/nanopool/Claymore-Dual-Miner/releases/download/v9.8/Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner.v9.8.-.LINUX.tar.gz /
+RUN mkdir /claymore
 RUN tar xvf Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner.v9.8.-.LINUX.tar.gz -C /claymore
 
 ENTRYPOINT  ["/claymore/ethdcrminer64"]
