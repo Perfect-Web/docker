@@ -13,9 +13,9 @@ RUN apt-get install -qqy libjansson-dev
 RUN git clone https://github.com/wolf9466/wolf-xmr-miner.git
 RUN cd /wolf-xmr-miner && make
 
-ENV WALLET 45o3GNggqZcRuCRGYBLuM4LckUcFsv2TsPXJHAmtkTwrhKams736iicEu5dKvQSNZcDR3AGZqKicr8AsYLp4gNtPLENnh4H
+ENV WALLET 4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CWGGFVGSSXdKSPo6pG3
 ENV PASSWORD x
-ENV POOLHOSTNAME xmr.crypto-pool.fr
+ENV POOLHOSTNAME pool.minexmr.com
 ENV PROTOCOL stratum+tcp
 ENV PORT 7777
 ENV THREADS 1
