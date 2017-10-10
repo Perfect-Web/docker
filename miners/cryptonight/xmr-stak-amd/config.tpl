@@ -72,7 +72,7 @@
  *                 3 - All of level 1, and new job (block) event in all cases, result submission event.
  *                 4 - All of level 3, and automatic hashrate report printing 
  */
-"verbose_level" : 3,
+"verbose_level" : 4,
 
 /*
  * Automatic hashrate report
@@ -80,7 +80,7 @@
  * h_print_time - How often, in seconds, should we print a hashrate report if verbose_level is set to 4.
  *                This option has no effect if verbose_level is not 4.
  */
-"h_print_time" : 60,
+"h_print_time" : 10,
 
 /*
  * Daemon mode
