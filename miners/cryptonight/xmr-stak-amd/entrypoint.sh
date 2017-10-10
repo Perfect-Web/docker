@@ -9,4 +9,6 @@ sed -i.bak 's/{password}/'"$PASSWORD"'/g' config.txt
 sed -i.bak 's/{rawintensity}/'"$RAWINTENSITY"'/g' config.txt
 sed -i.bak 's/{worksize}/'"$WORKSIZE"'/g' config.txt
 
+sed -i.bak 's/1.0/0/g' donate-level.h
+
 ./bin/xmr-stak-amd config.txt
