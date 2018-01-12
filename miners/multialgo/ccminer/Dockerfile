@@ -1,4 +1,4 @@
-FROM perfectweb/base:cuda-8.0-devel-ubuntu16.04-v1
+FROM perfectweb/base:cuda-9.0-devel-ubuntu16.04
 MAINTAINER Alin Jurj <office@perfectweb.ro>
 
 RUN git clone -b v2.2-tpruvot https://github.com/tpruvot/ccminer.git
