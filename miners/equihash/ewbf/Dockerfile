@@ -1,4 +1,4 @@
-FROM perfectweb/base:cuda-8.0-devel-ubuntu16.04-v1
+FROM perfectweb/base:cuda-9.0-runtime-ubuntu16.04
 MAINTAINER Alin Jurj <office@perfectweb.ro>
 
 COPY miner /
