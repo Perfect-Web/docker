@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.0-devel-ubuntu16.04
+FROM nvidia/cuda:10.2-devel-ubuntu18.04
 MAINTAINER Alin Jurj <office@perfectweb.ro>
 
 ENV export DISPLAY=:0

@@ -6,7 +6,7 @@ WORKDIR /
 
 RUN apt-get update && apt-get install -qqy ocl-icd-opencl-dev libhwloc-dev
 
-RUN git clone --branch 2.5.0 https://github.com/fireice-uk/xmr-stak.git
+RUN git clone --branch 2.10.4 https://github.com/fireice-uk/xmr-stak.git
 RUN mkdir /xmr-stak/build
 RUN sed -i 's/2.0/0.0/g' /xmr-stak/xmrstak/donate-level.hpp
 RUN cd /xmr-stak/build && cmake .. -DMICROHTTPD_ENABLE=OFF -DCMAKE_LINK_STATIC=ON -DXMR-STAK_COMPILE=generic && make

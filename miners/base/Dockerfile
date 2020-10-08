@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER Alin Jurj <office@perfectweb.ro>
 
 ENV DISPLAY=:0
