@@ -1,0 +1,11 @@
+FROM perfectweb/base:cuda-10.1-devel-ubuntu18.04
+MAINTAINER Alin Jurj <office@perfectweb.ro>
+
+WORKDIR /
+
+RUN apt-get update && apt-get install -qqy cmake
+RUN git clone https://github.com/RavenCommunity/kawpowminer.git
+RUN cd kawpowminer && git submodule update --init --recursive && mkdir build && cd build && cmake .. -DETHASHCUDA=ON  -DCUDA_LIB=/usr/local/cuda/lib64/stubs/libcuda.so -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda -DETHASHCL=OFF && make
+
+ENTRYPOINT ["/kawpowminer/build/kawpowminer/kawpowminer"]
+CMD ["-P", "stratum://0xe665b442D7b659bC434Cec98f8a05E6FAD8f26a4.default:x@eth-eu1.nanopool.org:9999"]
