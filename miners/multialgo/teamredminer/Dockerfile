@@ -1,0 +1,10 @@
+FROM perfectweb/base:cuda-10.1-devel-ubuntu18.04
+MAINTAINER Alin Jurj <office@perfectweb.ro>
+
+ADD https://github.com/todxx/teamredminer/releases/download/v0.4.5/teamredminer-v0.4.5-linux.tgz /
+RUN mkdir /teamredminer
+RUN tar xvf teamredminer-v0.4.5-linux.tgz -C /teamredminer
+RUN rm -rf /teamredminer/*.txt
+
+ENTRYPOINT  ["/teamredminer/teamredminer"]
+#CMD ["-epool", "closest.eth.perfectmine.io:8008", "-ewal", "0x717006Bf6B17cf8e1835a0c4dEC22D25D8972795", "-epsw", "x", "-allpools", "1", "-allcoins", "1", "-dpsw", "x", "-dwal", "480b19a1fee9a1c0579cc4438c5fd54785994f2fea989141d2aa99dc172ff52dcb55c44ea88d/dual", "-dpool", "stratum+tcp://sia-eu1.nanopool.org:7777", "-dcoin", "sia", "-eworker", "dual", "-dbg", "-1", "-tt", "1", "-ttdcr", "80", "-tstop", "95", "-etha", "2"]
